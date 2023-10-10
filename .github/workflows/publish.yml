@@ -44,7 +44,7 @@ jobs:
           npm ci
 
       - name: Extract package-version
-        run: node -p -e '`PACKAGE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
+        run: node -p -e "`PACKAGE_VERSION=${require('./package.json').version}`" >> $GITHUB_ENV
 
       - name: package-version-to-git-tag
         uses: pkgdeps/git-tag-action@00821b688297ad5792cf50e6aaa0d4404bec49d0 # v2.0.6
