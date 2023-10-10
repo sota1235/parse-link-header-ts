@@ -1,7 +1,4 @@
-const PARSE_LINK_HEADER_MAXLEN =
-  parseInt(process.env.PARSE_LINK_HEADER_MAXLEN ?? '') || 2000;
-const PARSE_LINK_HEADER_THROW_ON_MAXLEN_EXCEEDED =
-  process.env.PARSE_LINK_HEADER_THROW_ON_MAXLEN_EXCEEDED != null;
+const PARSE_LINK_HEADER_MAXLEN = 2000;
 
 interface RawLink {
   url: string;
@@ -40,55 +37,43 @@ function createObjects(acc: Record<string, string>, p: string) {
 }
 
 function parseLink(link: string): RawLink | null {
-  try {
-    const m = link.match(/<?([^>]*)>(.*)/);
+  const m = link.match(/<?([^>]*)>(.*)/);
 
-    if (m === null) {
-      console.warn('Invalid link header');
-      return null;
-    }
-
-    const linkUrl = m[1];
-    const parts = m[2].split(';');
-    const parsedUrl = new URL(linkUrl);
-    const qry: Record<string, string> = {};
-
-    for (const [key, value] of parsedUrl.searchParams) {
-      qry[key] = value;
-    }
-
-    parts.shift();
-
-    let info = parts.reduce<Record<string, string>>(createObjects, {});
-
-    info = { ...qry, ...info, url: linkUrl };
-    return info as RawLink;
-  } catch (e) {
-    return null;
+  if (m === null) {
+    throw new Error('Invalid link header');
   }
+
+  const linkUrl = m[1];
+  const parts = m[2].split(';');
+  const parsedUrl = new URL(linkUrl);
+  const qry: Record<string, string> = {};
+
+  for (const [key, value] of parsedUrl.searchParams) {
+    qry[key] = value;
+  }
+
+  parts.shift();
+
+  let info = parts.reduce<Record<string, string>>(createObjects, {});
+
+  info = { ...qry, ...info, url: linkUrl };
+  return info as RawLink;
 }
 
-function checkHeader(linkHeader: string) {
+function checkHeader(linkHeader: string): void {
   if (linkHeader.length > PARSE_LINK_HEADER_MAXLEN) {
-    if (PARSE_LINK_HEADER_THROW_ON_MAXLEN_EXCEEDED) {
-      throw new Error(
-        'Input string too long, it should be under ' +
-          PARSE_LINK_HEADER_MAXLEN +
-          ' characters.',
-      );
-    } else {
-      return false;
-    }
+    throw new Error(
+      `Input string too long, it should be under ${PARSE_LINK_HEADER_MAXLEN} characters.`
+    );
   }
-  return true;
 }
 
 export default function (linkHeader: string): Result | null {
   if (linkHeader === '') {
-    return null;
+    throw new Error('linkHeader is empty');
   }
 
-  if (!checkHeader(linkHeader)) return null;
+  checkHeader(linkHeader);
 
   return linkHeader
     .split(/,\s*</)

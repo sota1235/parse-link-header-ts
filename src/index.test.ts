@@ -82,7 +82,7 @@ test('parsing a proper link header with next, prev and last', () => {
 
 test('parsing an empty link header', () => {
   const linkHeader = '';
-  expect(parse(linkHeader)).toBeNull();
+  expect(() => parse(linkHeader)).toThrow('linkHeader is empty');
 });
 
 test('parsing a proper link header with next and a link without rel', () => {
