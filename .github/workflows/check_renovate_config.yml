@@ -1,0 +1,23 @@
+name: Checking config file of Renovate
+
+on:
+  pull_request:
+    paths:
+      - 'renovate.json'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setting up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+
+      - name: validating renovate config
+        run: npx --package renovate -c 'renovate-config-validator'

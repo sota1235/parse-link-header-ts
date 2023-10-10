@@ -4,7 +4,8 @@
   "description": "Parses a link header and returns paging information for each contained link.",
   "main": "index.js",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tap test/*.js",
+    "test:ci": "tap test/*.js"
   },
   "repository": {
     "type": "git",
