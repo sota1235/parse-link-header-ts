@@ -4,7 +4,7 @@ on:
   pull_request:
 
 jobs:
-  build:
+  check-code-quality:
     runs-on: ubuntu-latest
     permissions:
       contents: read
