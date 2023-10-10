@@ -68,7 +68,7 @@ function checkHeader(linkHeader: string): void {
   }
 }
 
-export default function (linkHeader: string): Result | null {
+export default function (linkHeader: string): Result {
   if (linkHeader === '') {
     throw new Error('linkHeader is empty');
   }
