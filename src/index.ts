@@ -9,7 +9,7 @@ interface Link extends RawLink {
   rel: string;
 }
 
-type Result = Record<string, Link>;
+export type Result = Record<string, Link>;
 
 function hasRel(link: null | Record<string, string>): link is Link {
   if (link === null) {
