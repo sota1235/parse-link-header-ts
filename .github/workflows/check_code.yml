@@ -1,0 +1,32 @@
+name: Checking code quality
+
+on:
+  pull_request:
+
+jobs:
+  check-code-quality:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setting up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: npm install
+        run: npm ci --no-audit --no-fund
+
+      - name: build
+        run: npm run build
+
+      - name: lint
+        run: npm run lint
+
+      - name: test
+        run: |
+          npm run test:ci
