@@ -8,6 +8,7 @@
     "type": "git",
     "url": "https://github.com/sota1235/parse-link-header-ts"
   },
+  "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
