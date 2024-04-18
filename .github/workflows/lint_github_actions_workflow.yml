@@ -15,7 +15,7 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v4
-      - uses: reviewdog/action-actionlint@82693e9e3b239f213108d6e412506f8b54003586 # v1.39.1
+      - uses: reviewdog/action-actionlint@9d8b58041eed1373f173e91b9a3db5a844197236 # v1.44.0
         with:
           tool_name: actionlint
           reporter: github-pr-review
