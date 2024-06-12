@@ -36,7 +36,7 @@ function createObjects(acc: Record<string, string>, p: string) {
   return acc;
 }
 
-function parseLink(link: string): RawLink | null {
+function parseLink(link: string, base?: string): RawLink | null {
   const m = link.match(/<?([^>]*)>(.*)/);
 
   if (m === null) {
@@ -45,7 +45,7 @@ function parseLink(link: string): RawLink | null {
 
   const linkUrl = m[1];
   const parts = m[2].split(';');
-  const parsedUrl = new URL(linkUrl);
+  const parsedUrl = new URL(linkUrl, base);
   const qry: Record<string, string> = {};
 
   for (const [key, value] of parsedUrl.searchParams) {
@@ -68,7 +68,7 @@ function checkHeader(linkHeader: string): void {
   }
 }
 
-export default function (linkHeader: string): Result {
+export default function (linkHeader: string, base?: string): Result {
   if (linkHeader === '') {
     throw new Error('linkHeader is empty');
   }
@@ -77,7 +77,7 @@ export default function (linkHeader: string): Result {
 
   return linkHeader
     .split(/,\s*</)
-    .map(parseLink)
+    .map((link) => parseLink(link, base))
     .filter<Link>(hasRel)
     .reduce(intoRels, {});
 }
