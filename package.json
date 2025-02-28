@@ -21,7 +21,7 @@
     "test:ci": "jest -c ./jest.config.ci.js"
   },
   "devDependencies": {
-    "@sota1235/eslint-config": "^4.2.2",
+    "@sota1235/eslint-config": "^5.0.0",
     "@types/jest": "^29.5.5",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "eslint": "^8.51.0",
