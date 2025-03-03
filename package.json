@@ -22,14 +22,14 @@
     "test:ci": "pnpm run test"
   },
   "devDependencies": {
-    "@sota1235/eslint-config": "^4.2.2",
+    "@sota1235/eslint-config": "^5.0.5",
     "@types/node": "^22.13.8",
-    "@typescript-eslint/eslint-plugin": "^6.7.5",
-    "eslint": "^8.51.0",
+    "eslint": "^9.21.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.4.3",
     "prettier": "^3.0.3",
-    "typescript": "^5.2.2"
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.25.0"
   },
   "keywords": [
     "parse",

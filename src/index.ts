@@ -63,7 +63,7 @@ function parseLink(link: string): RawLink | null {
 function checkHeader(linkHeader: string): void {
   if (linkHeader.length > PARSE_LINK_HEADER_MAXLEN) {
     throw new Error(
-      `Input string too long, it should be under ${PARSE_LINK_HEADER_MAXLEN} characters.`
+      `Input string too long, it should be under ${PARSE_LINK_HEADER_MAXLEN} characters.`,
     );
   }
 }
