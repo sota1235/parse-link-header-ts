@@ -19,7 +19,7 @@
     "eslint:fix": "npm run eslint --fix",
     "prettier": "prettier --write 'src/**/*.ts'",
     "test": "node --test --experimental-strip-types src/*.test.ts",
-    "test:ci": "pnpm run test"
+    "test:ci": "npm run test"
   },
   "devDependencies": {
     "@sota1235/eslint-config": "^5.0.5",
