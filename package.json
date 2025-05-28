@@ -1,6 +1,6 @@
 {
   "name": "@sota1235/parse-link-header-ts",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "type": "module",
   "description": "Parses a link header and returns paging information for each contained link.",
   "homepage": "https://github.com/sota1235/parse-link-header-ts",
