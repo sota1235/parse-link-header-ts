@@ -1,5 +1,7 @@
 # Changelog
 
+## [v3.0.1](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.0...v3.0.1) - 2026-03-07
+
 ## [v3.0.0](https://github.com/sota1235/parse-link-header-ts/compare/v2.0.1...v3.0.0) - 2026-03-07
 ### Breaking Changes
 - chore(deps): update node.js to v24 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/97
