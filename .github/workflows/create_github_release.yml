@@ -1,0 +1,85 @@
+name: Create GitHub Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  create-release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          fetch-depth: 0
+
+      - name: Generate release notes
+        id: release-notes
+        run: |
+          CURRENT_TAG="${GITHUB_REF_NAME}"
+          PREVIOUS_TAG=$(git tag -l 'v*' --sort=-v:refname | grep -v "^${CURRENT_TAG}$" | head -n 1)
+
+          if [ -z "$PREVIOUS_TAG" ]; then
+            COMMITS=$(git log --pretty=format:"- %s (%h)" --no-merges)
+          else
+            COMMITS=$(git log "${PREVIOUS_TAG}..${CURRENT_TAG}" --pretty=format:"- %s (%h)" --no-merges)
+          fi
+
+          FEATURES=""
+          FIXES=""
+          CHORES=""
+          OTHERS=""
+
+          while IFS= read -r line; do
+            if echo "$line" | grep -qiE "^- feat"; then
+              FEATURES="${FEATURES}${line}"$'\n'
+            elif echo "$line" | grep -qiE "^- fix"; then
+              FIXES="${FIXES}${line}"$'\n'
+            elif echo "$line" | grep -qiE "^- (chore|ci|build|docs|style|refactor|perf|test)"; then
+              CHORES="${CHORES}${line}"$'\n'
+            else
+              OTHERS="${OTHERS}${line}"$'\n'
+            fi
+          done <<< "$COMMITS"
+
+          {
+            echo "notes<<NOTES_EOF"
+
+            if [ -n "$FEATURES" ]; then
+              echo "### Features"
+              echo ""
+              echo "$FEATURES"
+            fi
+
+            if [ -n "$FIXES" ]; then
+              echo "### Bug Fixes"
+              echo ""
+              echo "$FIXES"
+            fi
+
+            if [ -n "$CHORES" ]; then
+              echo "### Maintenance"
+              echo ""
+              echo "$CHORES"
+            fi
+
+            if [ -n "$OTHERS" ]; then
+              echo "### Others"
+              echo ""
+              echo "$OTHERS"
+            fi
+
+            echo "NOTES_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            --title "$GITHUB_REF_NAME" \
+            --notes "${{ steps.release-notes.outputs.notes }}"
