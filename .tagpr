@@ -1,0 +1,6 @@
+# config file for the tagpr in git config format
+# The tagpr produces the PR that the next release
+[tagpr]
+	vPrefix = true
+	releaseBranch = main
+	versionFile = package.json

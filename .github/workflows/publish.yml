@@ -47,24 +47,6 @@ jobs:
         run: |
           npm ci
 
-      - name: Extract package-version
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7.1.0
-        id: extract-version
-        with:
-          script: |
-            const package = require('./package.json');
-            const version = package.version;
-            core.setOutput('version', version);
-
-      - name: package-version-to-git-tag
-        uses: pkgdeps/git-tag-action@ef111413f44ebe5cc05994e7f5b5b9edaaada08d # v3.0.0
-        with:
-          github_token: ${{ github.token }}
-          github_repo: ${{ github.repository }}
-          version: ${{ steps.extract-version.outputs.version }}
-          git_commit_sha: ${{ github.sha }}
-          git_tag_prefix: "v"
-
       - name: Build package
         run: npm run build:publish
 
