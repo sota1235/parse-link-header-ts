@@ -1,0 +1,7 @@
+issuer: https://token.actions.githubusercontent.com
+subject_pattern: repo:sota1235/parse-link-header-ts:.*
+
+permissions:
+  contents: write
+  pull_requests: write
+  issues: read
