@@ -1,5 +1,8 @@
 {
   "extends": [
     "github>sota1235/renovate-config#0.0.8"
+  ],
+  "labels": [
+    "kind/dependencies"
   ]
 }
