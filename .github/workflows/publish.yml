@@ -1,35 +1,12 @@
 name: Publishing to npm
 on:
   push:
-    branches:
-      - main
     tags:
-      - "!*"
-    paths:
-      - 'package.json'
+      - "v*"
 
 jobs:
-  check-version:
-    name: Checking whether it can be published or not
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          persist-credentials: false
-
-      - name: Setting up Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
-        with:
-          node-version-file: .node-version
-          registry-url: 'https://registry.npmjs.org'
-          cache: npm
-
-      - name: Executing can-npm-publish
-        run: npx can-npm-publish --verbose
-
-  release:
-    name: Releasing
-    needs: check-version
+  publish:
+    name: Publishing
     runs-on: ubuntu-latest
     environment: publish
     permissions:
@@ -48,26 +25,7 @@ jobs:
           cache: npm
 
       - name: Installing dependencies
-        run: |
-          npm ci
-
-      - name: Extract package-version
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
-        id: extract-version
-        with:
-          script: |
-            const package = require('./package.json');
-            const version = package.version;
-            core.setOutput('version', version);
-
-      - name: package-version-to-git-tag
-        uses: pkgdeps/git-tag-action@ef111413f44ebe5cc05994e7f5b5b9edaaada08d # v3.0.0
-        with:
-          github_token: ${{ github.token }}
-          github_repo: ${{ github.repository }}
-          version: ${{ steps.extract-version.outputs.version }}
-          git_commit_sha: ${{ github.sha }}
-          git_tag_prefix: "v"
+        run: npm ci
 
       - name: Install latest npm
         run: npm install -g npm@latest
