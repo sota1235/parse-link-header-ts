@@ -1,5 +1,23 @@
 # Changelog
 
+## [v3.0.1](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.0...v3.0.1) - 2026-04-06
+### Dependencies
+- chore(deps): update dependency lint-staged to v16.3.3 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/151
+- chore(deps): update dependency typescript-eslint to v8.57.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/153
+- chore(deps): update dependency @types/node to v25.4.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/152
+- chore(deps): update dependency lint-staged to v16.3.4 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/154
+- chore(deps): update dependency lint-staged to v16.4.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/157
+- chore(deps): update dependency typescript-eslint to v8.57.2 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/155
+- chore(deps): update dependency @types/node to v25.5.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/156
+- chore(deps): update node.js to v24.14.1 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/159
+- chore(deps): update dependency eslint to v10.1.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/160
+- chore(deps): update dependency typescript-eslint to v8.58.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/162
+- chore(deps): update songmu/tagpr action to v1.18.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/164
+- chore(deps): update reviewdog/action-actionlint action to v1.72.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/163
+- chore(deps): update dependency typescript to v6 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/161
+### Others
+- chore(deps-dev): bump flatted from 3.3.3 to 3.4.2 by @dependabot[bot] in https://github.com/sota1235/parse-link-header-ts/pull/158
+
 ## [v3.0.0](https://github.com/sota1235/parse-link-header-ts/compare/v2.0.1...v3.0.0) - 2026-03-07
 ### Breaking Changes
 - chore(deps): update node.js to v24 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/97
