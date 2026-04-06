@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "ESNEXT",
-    "module": "ESNext",
-    "moduleResolution": "node",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "declaration": true,
     "removeComments": true,
     "strict": true,
@@ -12,7 +12,9 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "types": ["node"],
     "esModuleInterop": true,
+    "rootDir": "./src",
     "outDir": "./dist"
   },
   "include": [
