@@ -1,5 +1,13 @@
 # Changelog
 
+## [v3.0.2](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.1...v3.0.2) - 2026-04-12
+### Dependencies
+- chore(deps): update dependency @types/node to v25.5.2 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/165
+- chore(deps): update dependency eslint to v10.2.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/167
+- chore(deps): update songmu/tagpr action to v1.18.1 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/166
+- chore(deps): update dependency typescript-eslint to v8.58.1 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/169
+- chore(deps): update songmu/tagpr action to v1.18.2 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/170
+
 ## [v3.0.1](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.0...v3.0.1) - 2026-04-06
 ### Dependencies
 - chore(deps): update dependency lint-staged to v16.3.3 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/151
