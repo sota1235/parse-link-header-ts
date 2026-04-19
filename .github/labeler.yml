@@ -1,3 +1,5 @@
+# ライブラリの挙動に関係ないファイルのみの変更時にラベルを付与する
+# 否定パターンで「全ファイルがライブラリ関連でない」を表現
 skip-changelog:
   - changed-files:
       - all-globs-to-all-files:
