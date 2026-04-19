@@ -1,12 +1,13 @@
 skip-changelog:
   - changed-files:
       - all-globs-to-all-files:
-          - '.github/**'
-          - '.claude/**'
-          - '.husky/**'
-          - 'CLAUDE.md'
-          - 'README.md'
-          - 'CHANGELOG.md'
-          - '.tagpr'
-          - 'renovate.json'
-          - '.node-version'
+          - '!src/**'
+          - '!package.json'
+          - '!package-lock.json'
+          - '!tsconfig.json'
+          - '!tsconfig.publish.json'
+          - '!eslint.config.mjs'
+          - '!prettier.config.js'
+          - '!.gitignore'
+          - '!.npmignore'
+          - '!LICENSE'
