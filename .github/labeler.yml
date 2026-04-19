@@ -1,0 +1,12 @@
+skip-changelog:
+  - changed-files:
+      - all-globs-to-all-files:
+          - '.github/**'
+          - '.claude/**'
+          - '.husky/**'
+          - 'CLAUDE.md'
+          - 'README.md'
+          - 'CHANGELOG.md'
+          - '.tagpr'
+          - 'renovate.json'
+          - '.node-version'
