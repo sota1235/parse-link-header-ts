@@ -1,5 +1,21 @@
 # Changelog
 
+## [v3.0.2](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.1...v3.0.2) - 2026-04-19
+### Dependencies
+- chore(deps): update dependency @types/node to v25.5.2 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/165
+- chore(deps): update dependency eslint to v10.2.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/167
+- chore(deps): update songmu/tagpr action to v1.18.1 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/166
+- chore(deps): update dependency typescript-eslint to v8.58.1 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/169
+- chore(deps): update songmu/tagpr action to v1.18.2 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/170
+- chore(deps): update dependency prettier to v3.8.2 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/171
+- chore(deps): update songmu/tagpr action to v1.18.3 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/173
+- chore(deps): update dependency typescript-eslint to v8.58.2 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/172
+- chore(deps): update dependency @types/node to v25.6.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/174
+- chore(deps): update node.js to v24.15.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/175
+- chore(deps): update dependency prettier to v3.8.3 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/176
+### Others
+- package.jsonのfilesフィールドでpublish対象を明示化 by @sota1235 in https://github.com/sota1235/parse-link-header-ts/pull/178
+
 ## [v3.0.1](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.0...v3.0.1) - 2026-04-06
 ### Dependencies
 - chore(deps): update dependency lint-staged to v16.3.3 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/151
