@@ -10,6 +10,10 @@
     "url": "https://github.com/sota1235/parse-link-header-ts"
   },
   "main": "dist/index.js",
+  "files": [
+    "dist",
+    "!dist/**/*.test.*"
+  ],
   "scripts": {
     "build": "tsc",
     "build:publish": "tsc -p ./tsconfig.publish.json",
