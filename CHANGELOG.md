@@ -1,5 +1,18 @@
 # Changelog
 
+## [v3.0.3](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.2...v3.0.3) - 2026-06-01
+### Dependencies
+- chore(deps): update dependency typescript-eslint to v8.59.2 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/184
+- chore(deps): update dependency eslint to v10.3.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/186
+- chore(deps): update dependency @types/node to v25.6.2 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/190
+- chore(deps): update dependency typescript-eslint to v8.59.3 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/191
+- chore(deps): update dependency @types/node to v25.7.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/192
+- chore(deps): update dependency lint-staged to v17 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/188
+- chore(deps): update dependency typescript-eslint to v8.59.4 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/193
+- chore(deps): update dependency eslint to v10.4.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/195
+- chore(deps): update dependency @types/node to v25.9.1 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/194
+- chore(deps): update dependency typescript-eslint to v8.60.0 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/197
+
 ## [v3.0.2](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.1...v3.0.2) - 2026-05-01
 ### Dependencies
 - chore(deps): update dependency @types/node to v25.5.2 by @renovate[bot] in https://github.com/sota1235/parse-link-header-ts/pull/165
