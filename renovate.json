@@ -4,5 +4,15 @@
   ],
   "labels": [
     "kind/dependencies"
+  ],
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "addLabels": [
+        "skip-changelog"
+      ]
+    }
   ]
 }
