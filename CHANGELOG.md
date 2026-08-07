@@ -1,5 +1,7 @@
 # Changelog
 
+## [v3.0.6](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.5...v3.0.6) - 2026-08-07
+
 ## [v3.0.5](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.4...v3.0.5) - 2026-07-31
 
 ### Others
