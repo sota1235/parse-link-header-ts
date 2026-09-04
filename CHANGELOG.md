@@ -1,5 +1,11 @@
 # Changelog
 
+## [v3.0.6](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.5...v3.0.6) - 2026-09-04
+
+### Others
+- build(deps-dev): bump js-yaml from 4.3.0 to 4.3.1 by @dependabot[bot] in https://github.com/sota1235/parse-link-header-ts/pull/256
+- build(deps-dev): bump brace-expansion from 1.1.12 to 1.1.18 by @dependabot[bot] in https://github.com/sota1235/parse-link-header-ts/pull/250
+
 ## [v3.0.5](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.4...v3.0.5) - 2026-07-31
 
 ### Others
