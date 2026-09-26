@@ -1,5 +1,10 @@
 # Changelog
 
+## [v3.0.7](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.6...v3.0.7) - 2026-09-26
+
+### Others
+- build(deps-dev): bump js-yaml from 4.3.1 to 4.3.2 by @dependabot[bot] in https://github.com/sota1235/parse-link-header-ts/pull/279
+
 ## [v3.0.6](https://github.com/sota1235/parse-link-header-ts/compare/v3.0.5...v3.0.6) - 2026-09-06
 
 ### Others
